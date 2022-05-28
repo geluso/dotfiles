@@ -1,0 +1,41 @@
+export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
+
+alias br="source ~/.bash_profile"
+alias be="vim ~/.bash_profile; br"
+alias ve="vim ~/.vimrc"
+
+alias q=exit
+alias pingg="ping google.com"
+
+alias x86="arch -x86_64"
+alias x86c="echo 'arch -x86_64'"
+
+alias billing="vim ~/Documents/billing/data"
+alias smc="cd /Users/geluso/Team/autodispatch"
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias notes="vim ~/Documents/notes"
+
+function vert_to_horz() {
+  in=$1
+  out=$2
+  ffmpeg -i $in -vf "scale=720:406:force_original_aspect_ratio=decrease,pad=720:406:(ow-iw)/2:(oh-ih)/2,setsar=1" $out
+}
+
+alias pretty_print_json="python -m json.tool"
+alias serve="python -m SimpleHTTPServer"
+alias broguesaves="cd '/Users/geluso/Library/Application Support/Brogue/Brogue CE'"
+
+alias moon="ssh moonmayor@mooncolony.org"
+alias see_token="echo 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"
+alias latest="ls -alt"
+alias git_log="git log --date=short --pretty=format:'%ad %s'"
+alias vnc="open /Applications/tightvnc-jviewer.jar"
+
+alias book="cd ~/Code/learn-programming-programming-board-games/"
+alias lppbg="cd ~/Code/learn-programming-programming-board-games/"
+alias journal="vim ~/Documents/night"
+alias ignore="echo node_modules > .gitignore"
